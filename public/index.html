@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EM 2024 Tippspiel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>EM 2024 Tippspiel</h1>
+    <form id="tippspielForm">
+        <label for="participant">Teilnehmername:</label>
+        <input type="text" id="participant" name="participant" required>
+        <label for="match">Spiel:</label>
+        <select id="match" name="match"></select>
+        <label id="team1Label" for="team1">Tipp für Team 1:</label>
+        <input type="number" id="team1" name="team1" required min="0">
+        <label id="team2Label" for="team2">Tipp für Team 2:</label>
+        <input type="number" id="team2" name="team2" required min="0">
+        <button type="submit">Tipp abgeben</button>
+    </form>
+    <h2>Abgegebene Tipps</h2>
+    <ul id="tipsList"></ul>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
