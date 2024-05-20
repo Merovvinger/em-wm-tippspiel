@@ -44,6 +44,8 @@ Dieses Projekt steht unter der MIT-Lizenz. Weitere Informationen findest du in d
 ## Autoren
 
 merovvinger - https://github.com/Merovvinger
+
 alphaPhantm - https://github.com/alphaPhantm
+
 ???
 
