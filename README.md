@@ -24,6 +24,14 @@ To Do:
     .. styles.css
 
     .. script.js
+    ../images
+        ../flags
+            .. germany.png (Source: https://www.freeflagicons.com/ - Details / Credits siehe unten unter Credits.
+            .. deutschland.png (Source: https://www.freeflagicons.com/ - Details / Credits siehe unten unter Credits.
+            .. schweiz.pgn (Source: https://www.freeflagicons.com/ - Details / Credits siehe unten unter Credits.
+            .. switzerland.png (Source: https://www.freeflagicons.com/ - Details / Credits siehe unten unter Credits.
+            .. scotland.png (Source: https://www.freeflagicons.com/ - Details / Credits siehe unten unter Credits.
+            .. schottland.png (Source: https://www.freeflagicons.com/ - Details / Credits siehe unten unter Credits.
 
 games.json
 
@@ -51,6 +59,9 @@ GET /games: Holt die Spiele aus der games.json-Datei.
 ## Lizenz
 
 Dieses Projekt steht unter der MIT-Lizenz. Weitere Informationen findest du in der LICENSE-Datei.
+
+## Credits
+Alle Flaggen-Bilder kommen von "https://www.freeflagicons.com/" und dürfen nur für nicht kommerziellen Einsatz verwendet werden. Sollten die Bilder verändert werden, muss dies explizit erwähnt werden. AUch die weitere Nutzung muss ein entsprechender Verweis auf die Webseite des originalen Herstellers gemacht werden.
 
 ## Autoren
 
