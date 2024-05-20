@@ -8,16 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
             let matchCounter = 1;
 
             for (const group in data) {
-                const teams = data[group];
-                for (let i = 0; i < teams.length; i += 2) {
-                    const team1 = Object.values(teams[i])[0];
-                    const team2 = Object.values(teams[i + 1])[0];
+                const games = data[group];
+                games.forEach(game => {
+                    const match = `Spiel ${matchCounter}: ${game["Team A"]} vs ${game["Team B"]} - ${game.Date} ${game.Hour} @ ${game.Location}`;
                     matches.push({
-                        match: `Spiel ${matchCounter}: ${team1} vs ${team2}`,
-                        teams: [team1, team2]
+                        match: match,
+                        teams: [game["Team A"], game["Team B"]]
                     });
                     matchCounter++;
-                }
+                });
             }
 
             matches.forEach((match, index) => {
@@ -53,16 +52,17 @@ document.getElementById('tippspielForm').addEventListener('submit', function(eve
         .then(response => response.json())
         .then(data => {
             const matches = [];
+            let matchCounter = 1;
             for (const group in data) {
-                const teams = data[group];
-                for (let i = 0; i < teams.length; i += 2) {
-                    const team1 = Object.values(teams[i])[0];
-                    const team2 = Object.values(teams[i + 1])[0];
+                const games = data[group];
+                games.forEach(game => {
+                    const match = `Spiel ${matchCounter}: ${game["Team A"]} vs ${game["Team B"]} - ${game.Date} ${game.Hour} @ ${game.Location}`;
                     matches.push({
-                        match: `Spiel ${matches.length + 1}: ${team1} vs ${team2}`,
-                        teams: [team1, team2]
+                        match: match,
+                        teams: [game["Team A"], game["Team B"]]
                     });
-                }
+                    matchCounter++;
+                });
             }
 
             const match = matches[matchIndex].match;
