@@ -10,11 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
             for (const group in data) {
                 const games = data[group];
                 games.forEach(game => {
-                    const match = `Spiel ${matchCounter}: ${game["Team A"]} vs ${game["Team B"]} - ${game.Date} ${game.Hour} @ ${game.Location}`;
-                    matches.push({
-                        match: match,
-                        teams: [game["Team A"], game["Team B"]]
-                    });
+                    const match = {
+                        id: matchCounter,
+                        match: `Spiel ${matchCounter}: ${game["Team A"]} vs ${game["Team B"]} - ${game.Date} ${game.Hour} @ ${game.Location}`,
+                        teams: [game["Team A"], game["Team B"]],
+                        flags: [`images/flags/${game["Team A"].toLowerCase()}.png`, `images/flags/${game["Team B"].toLowerCase()}.png`]
+                    };
+                    matches.push(match);
                     matchCounter++;
                 });
             }
@@ -30,6 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const selectedMatch = matches[event.target.value];
                 document.getElementById('team1Label').textContent = `Tipp für ${selectedMatch.teams[0]}:`;
                 document.getElementById('team2Label').textContent = `Tipp für ${selectedMatch.teams[1]}:`;
+                document.getElementById('team1Flag').src = selectedMatch.flags[0];
+                document.getElementById('team2Flag').src = selectedMatch.flags[1];
+                document.getElementById('team1Flag').alt = selectedMatch.teams[0];
+                document.getElementById('team2Flag').alt = selectedMatch.teams[1];
             });
 
             fetch('/tips')
@@ -56,11 +62,13 @@ document.getElementById('tippspielForm').addEventListener('submit', function(eve
             for (const group in data) {
                 const games = data[group];
                 games.forEach(game => {
-                    const match = `Spiel ${matchCounter}: ${game["Team A"]} vs ${game["Team B"]} - ${game.Date} ${game.Hour} @ ${game.Location}`;
-                    matches.push({
-                        match: match,
-                        teams: [game["Team A"], game["Team B"]]
-                    });
+                    const match = {
+                        id: matchCounter,
+                        match: `Spiel ${matchCounter}: ${game["Team A"]} vs ${game["Team B"]} - ${game.Date} ${game.Hour} @ ${game.Location}`,
+                        teams: [game["Team A"], game["Team B"]],
+                        flags: [`images/flags/${game["Team A"].toLowerCase()}.png`, `images/flags/${game["Team B"].toLowerCase()}.png`]
+                    };
+                    matches.push(match);
                     matchCounter++;
                 });
             }

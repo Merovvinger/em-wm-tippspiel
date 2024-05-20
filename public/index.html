@@ -10,15 +10,20 @@
 <div class="container">
     <h1>EM 2024 Tippspiel</h1>
     <form id="tippspielForm">
-        <!-- Remove when authN is inplace. Display playername from login token. -->
         <label for="participant">Teilnehmername:</label>
         <input type="text" id="participant" name="participant" required>
         <label for="match">Spiel:</label>
         <select id="match" name="match"></select>
-        <label id="team1Label" for="team1">Tipp für Team 1:</label>
-        <input type="number" id="team1" name="team1" required min="0">
-        <label id="team2Label" for="team2">Tipp für Team 2:</label>
-        <input type="number" id="team2" name="team2" required min="0">
+        <div id="team1Container">
+            <img id="team1Flag" src="" alt="" class="flag">
+            <label id="team1Label" for="team1">Tipp für Team 1:</label>
+            <input type="number" id="team1" name="team1" required min="0">
+        </div>
+        <div id="team2Container">
+            <img id="team2Flag" src="" alt="" class="flag">
+            <label id="team2Label" for="team2">Tipp für Team 2:</label>
+            <input type="number" id="team2" name="team2" required min="0">
+        </div>
         <button type="submit">Tipp abgeben</button>
     </form>
     <h2>Abgegebene Tipps</h2>
