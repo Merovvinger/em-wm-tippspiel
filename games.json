@@ -1,0 +1,30 @@
+{
+  "Gruppe A": [
+    {
+      "Team A": "Deutschland"
+    },
+    {
+      "Team B": "Schottland"
+    },
+    {
+      "Team C": "Schweiz"
+    },
+    {
+      "Team D": "Ungarn"
+    }
+  ],
+  "Gruppe B": [
+    {
+      "Team A": "asdf"
+    },
+    {
+      "Team B": "asder"
+    },
+    {
+      "Team C": "üplkm"
+    },
+    {
+      "Team D": "ngfr"
+    }
+  ]
+}
