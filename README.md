@@ -16,14 +16,23 @@ To Do:
 ## Projektstruktur
 
 /em-wm-tippspiel
+
 /public
-.. index.html
-.. styles.css
-.. script.js
+
+    .. index.html
+
+    .. styles.css
+
+    .. script.js
+
 games.json
+
 server.js
+
 package.json
+
 tips.json
+
 
 ## Funktionen
 
@@ -34,7 +43,9 @@ Teilnehmer können ihren bestehenden Tipp für ein Spiel ändern.
 ## API-Endpunkte
 
 GET /tips: Holt alle abgegebenen Tipps.
+
 POST /submit-tip: Gibt einen Tipp für ein Spiel ab oder aktualisiert einen bestehenden Tipp.
+
 GET /games: Holt die Spiele aus der games.json-Datei.
 
 ## Lizenz
